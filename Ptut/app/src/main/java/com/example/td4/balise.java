@@ -13,7 +13,7 @@ public class balise {
     private LatLng coordonnees;
     private String titre;
     private boolean valide=false;
-    private Marker marker=null;
+    private Marker marker;
 
     public  balise(MapsActivity pContext,LatLng pCoordonnees,String pTitre){
     this.context=pContext;
