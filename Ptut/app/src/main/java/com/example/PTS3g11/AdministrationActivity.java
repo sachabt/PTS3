@@ -1,16 +1,14 @@
-package com.example.td4;
+package com.example.PTS3g11;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MMIActivity extends present {
+public class AdministrationActivity extends present{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mmi);
+        setContentView(R.layout.administration);
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(v -> change());
     }
-
 }

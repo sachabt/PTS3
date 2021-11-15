@@ -1,14 +1,13 @@
-package com.example.td4;
+package com.example.PTS3g11;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class GBActivity extends present {
+public class MMIActivity extends present {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gb);
+        setContentView(R.layout.mmi);
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(v -> change());
     }

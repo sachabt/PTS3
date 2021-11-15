@@ -1,6 +1,5 @@
-package com.example.td4;
+package com.example.PTS3g11;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 

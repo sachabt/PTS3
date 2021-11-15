@@ -1,8 +1,7 @@
-package com.example.td4;
+package com.example.PTS3g11;
 
-import com.example.td4.databinding.ActivityMapsBinding;
+import com.example.PTS3g11.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
