@@ -1,15 +1,14 @@
-package com.example.PTS3g11;
+package com.example.td4;
 
 import android.os.Bundle;
 import android.widget.Button;
 
-public class GBActivity extends present {
+public class AdministrationActivity extends present{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gb);
+        setContentView(R.layout.administration);
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(v -> change());
     }
-
 }

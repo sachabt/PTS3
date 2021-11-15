@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.PTS3g11">
+    package="com.example.td4">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -31,7 +31,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.PTS3g11.MapsActivity"
+            android:name=".MapsActivity"
             android:exported="true"
             android:label="ProjetTut"   >
             <intent-filter>
@@ -41,16 +41,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.PTS3g11.infoActivity">
+        <activity android:name=".infoActivity">
             </activity>
 
-        <activity android:name="com.example.PTS3g11.MMIActivity">
+        <activity android:name=".MMIActivity">
         </activity>
 
-        <activity android:name="com.example.PTS3g11.TCActivity">
+        <activity android:name=".TCActivity">
         </activity>
 
-        <activity android:name="com.example.PTS3g11.GBActivity">
+        <activity android:name=".GBActivity">
         </activity>
 
 

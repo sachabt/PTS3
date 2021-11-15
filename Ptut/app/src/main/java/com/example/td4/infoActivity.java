@@ -1,6 +1,8 @@
-package com.example.PTS3g11;
+package com.example.td4;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class infoActivity extends present {

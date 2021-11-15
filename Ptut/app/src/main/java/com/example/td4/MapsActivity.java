@@ -1,4 +1,4 @@
-package com.example.PTS3g11;
+package com.example.td4;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -19,7 +19,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.PTS3g11.databinding.ActivityMapsBinding;
+import com.example.td4.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
