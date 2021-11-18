@@ -26,7 +26,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, LocationListener {
@@ -35,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private balise[] tabBalise;
-    private balise baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseST;
+    private balise baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU;
     private LocationManager locationManager;
     private static final long MIN_TIME = 40;
     private static final float MIN_DISTANCE = 100;
@@ -53,8 +52,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "MMI");
         baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "TC");
         baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "GB");
-        baliseST = new balise(this, new LatLng(48.0859, -0.7580282), "Administration");
-        tabBalise = new balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseST};
+        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "Administration");
+        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "Bibliotheque");
+
+        tabBalise = new balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU};
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
