@@ -40,8 +40,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private balise[] tabBalise;
     private balise baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU;
     private LocationManager locationManager;
-    private static final long MIN_TIME = 40;
-    private static final float MIN_DISTANCE = 100;
+    private static final long MIN_TIME = 400;
+    private static final float MIN_DISTANCE = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +51,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Initialise les différents points d'intérêt et les ajoutes a un tableau
-        baliseBatInfo = new balise(this, new LatLng(48.0860628, -0.7596008), "info");
-        baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "MMI");
-        baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "TC");
-        baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "GB");
-        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "Administration");
-        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "Bibliotheque");
+        baliseBatInfo = new balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus:\nInfo");
+        baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus:\nMMI");
+        baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus:\nTC");
+        baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "En savoir plus:\nGB");
+        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "En savoir plus:\nAdministration");
+        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "En savoir plus:\nBibliotheque");
 
         tabBalise = new balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU};
 
@@ -68,11 +68,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    /*
+    /**
      * Permet la création des markers sur la map a sa création.
      * Positionne ensuite la caméra sur les coordonnées du téléphone
      * Défini la possibilité de zoom minimal et maximal
-     */
+     **/
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -149,7 +149,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //You can also use LocationManager.GPS_PROVIDER and LocationManager.PASSIVE_PROVIDER
 
 
-      //  LatLng pointZoom= new LatLng(48.0859, -0.7580282);
+       //  LatLng pointZoom= new LatLng(48.0859, -0.7580282);
        // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pointZoom,20));
         mMap.setOnInfoWindowClickListener(this);
     }
@@ -180,26 +180,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void change(Marker marker)  {
 
         switch (marker.getTitle()){
-            case "info":
-                Intent info= new Intent(getApplicationContext(),infoActivity.class);
-                startActivity(info);
-                break;
-            case "MMI":
-                Intent MMI= new Intent(getApplicationContext(),MMIActivity.class);
-                startActivity(MMI);
-                break;
-            case "GB":
-                Intent GB= new Intent(getApplicationContext(),GBActivity.class);
-                startActivity(GB);
-                break;
-            case "TC":
-                Intent TC= new Intent(getApplicationContext(),TCActivity.class);
-                startActivity(TC);
-                break;
-            case "Administration":
+            case "En savoir plus:\nAdministration":
                 Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
                 startActivity(Administration);
                 break;
+            case "En savoir plus:\nInfo":
+                Intent info= new Intent(getApplicationContext(),infoActivity.class);
+                startActivity(info);
+                break;
+            case "En savoir plus:\nMMI":
+                Intent MMI= new Intent(getApplicationContext(),MMIActivity.class);
+                startActivity(MMI);
+                break;
+            case "En savoir plus:\nGB":
+                Intent GB= new Intent(getApplicationContext(),GBActivity.class);
+                startActivity(GB);
+                break;
+            case "En savoir plus:\nTC":
+                Intent TC= new Intent(getApplicationContext(),TCActivity.class);
+                startActivity(TC);
+                break;
+
             default:
                 break;
         }
