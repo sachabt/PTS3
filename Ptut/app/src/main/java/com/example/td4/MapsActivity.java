@@ -163,7 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onInfoWindowClick(Marker marker) {
 
 
-        Log.i("click sur le marker", marker.getTitle());
+        Log.i("Clique sur le marker", marker.getTitle());
 
         this.change(marker);
 
