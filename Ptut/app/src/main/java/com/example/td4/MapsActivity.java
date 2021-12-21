@@ -51,12 +51,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Initialise les différents points d'intérêt et les ajoutes a un tableau
-        baliseBatInfo = new balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus:\nInfo");
-        baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus:\nMMI");
-        baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus:\nTC");
-        baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "En savoir plus:\nGB");
-        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "En savoir plus:\nAdministration");
-        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "En savoir plus:\nBibliotheque");
+        baliseBatInfo = new balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus: Info");
+        baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus: MMI");
+        baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus: TC");
+        baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "En savoir plus: GB");
+        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "En savoir plus: Administration");
+        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "En savoir plus: Bibliotheque");
 
         tabBalise = new balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU};
 
