@@ -35,6 +35,7 @@ public class AdminGame extends game {
     private TextView secondPartText;
     private TextView thirdPartText;
     private TextView fourthPartText;
+    private Button continu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +116,8 @@ public class AdminGame extends game {
            }
         });
 
+        continu=findViewById(R.id.continu);
+        continu.setOnClickListener(v -> finish());
     }
 
 

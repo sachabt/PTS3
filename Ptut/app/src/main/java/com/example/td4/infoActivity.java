@@ -8,7 +8,7 @@ public class infoActivity extends present {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-        final ImageButton backButton = findViewById(R.id.backButton);
+        final ImageButton backButton = findViewById(R.id.backButtonA);
         backButton.setOnClickListener(v -> change());
     }
 

@@ -2,21 +2,22 @@ package com.example.td4;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class AdministrationActivity extends present{
 
-  //  private ImageButton backButton;
+
     private Button play;
+    private ImageView backButtonA;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
-       // backButton = findViewById(R.id.backButton);
-        //backButton.setOnClickListener(v -> change());
-        play=findViewById(R.id.play);
+
+        backButtonA = findViewById(R.id.backButtonA);
+        backButtonA.setOnClickListener(v -> change());
+        play=findViewById(R.id.start);
         play.setOnClickListener(v -> {
             Intent adminGame=new Intent(getApplicationContext(),AdminGame.class);
             startActivity(adminGame);
