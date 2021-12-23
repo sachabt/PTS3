@@ -1,4 +1,4 @@
-package com.example.td4;
+package com.example.PTS3;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -20,13 +20,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.td4.databinding.ActivityMapsBinding;
+import com.example.PTS3.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
@@ -144,13 +143,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         //Permet de positionner la map sur l'utilisateur
-       locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this);
         //You can also use LocationManager.GPS_PROVIDER and LocationManager.PASSIVE_PROVIDER
 
+        //lignes de devMode
+        //LatLng pointZoom= new LatLng(48.0859, -0.7580282);
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pointZoom,20));
 
-       //  LatLng pointZoom= new LatLng(48.0859, -0.7580282);
-       // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pointZoom,20));
+
         mMap.setOnInfoWindowClickListener(this);
     }
 
@@ -176,27 +177,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-    //Permet de changer d'ecran pour passer a l'ecran des informations de batiment
+    //Permet de changer d'écran pour passer a l'écran des informations de batiment
     public void change(Marker marker)  {
 
         switch (marker.getTitle()){
-            case "En savoir plus:\nAdministration":
+            case "En savoir plus: Administration":
                 Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
                 startActivity(Administration);
                 break;
-            case "En savoir plus:\nInfo":
+            case "En savoir plus: Info":
                 Intent info= new Intent(getApplicationContext(),infoActivity.class);
                 startActivity(info);
                 break;
-            case "En savoir plus:\nMMI":
+            case "En savoir plus: MMI":
                 Intent MMI= new Intent(getApplicationContext(),MMIActivity.class);
                 startActivity(MMI);
                 break;
-            case "En savoir plus:\nGB":
+            case "En savoir plus: GB":
                 Intent GB= new Intent(getApplicationContext(),GBActivity.class);
                 startActivity(GB);
                 break;
-            case "En savoir plus:\nTC":
+            case "En savoir plus: TC":
                 Intent TC= new Intent(getApplicationContext(),TCActivity.class);
                 startActivity(TC);
                 break;

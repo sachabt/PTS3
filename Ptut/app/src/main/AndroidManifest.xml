@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.td4">
+    package="com.example.PTS3">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TD4">
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -31,7 +31,7 @@
             android:value="AIzaSyAot-Z_bJvEeoZBlZnOdyxdO2-eDqw0Zw4" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.example.PTS3.MapsActivity"
             android:exported="true"
             android:label="ProjetTut"   >
             <intent-filter>
@@ -41,19 +41,22 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AdministrationActivity">
+        <activity android:name="com.example.PTS3.AdministrationActivity">
         </activity>
 
-        <activity android:name=".infoActivity">
+        <activity android:name="com.example.PTS3.AdminGame">
+        </activity>
+
+        <activity android:name="com.example.PTS3.infoActivity">
             </activity>
 
-        <activity android:name=".MMIActivity">
+        <activity android:name="com.example.PTS3.MMIActivity">
         </activity>
 
-        <activity android:name=".TCActivity">
+        <activity android:name="com.example.PTS3.TCActivity">
         </activity>
 
-        <activity android:name=".GBActivity">
+        <activity android:name="com.example.PTS3.GBActivity">
         </activity>
 
 

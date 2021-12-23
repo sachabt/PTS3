@@ -1,10 +1,9 @@
-package com.example.td4;
+package com.example.PTS3;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class AdministrationActivity extends present{
+public class infoActivity extends present {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -12,4 +11,9 @@ public class AdministrationActivity extends present{
         final ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> change());
     }
+
+
+
+
+
 }

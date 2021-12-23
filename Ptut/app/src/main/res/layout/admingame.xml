@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/startPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FBF9F9"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="JEU ADMINISTRATION"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/StartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Start" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:fallbackLineSpacing="false"
+            android:hapticFeedbackEnabled="false"
+            android:padding="15dp"
+            android:text="timer"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/gamePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/firstPartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accepter les conditions d'utilisation"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/secondPartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/piege1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celui ci c'est un piege" />
+
+                <TextView
+                    android:id="@+id/thirdPartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/piege2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celui ci c'est un piege" />
+
+                <TextView
+                    android:id="@+id/fourthPartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/valider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Valider" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/winPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="120dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#777777"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/startPage"
+        app:layout_constraintEnd_toStartOf="@+id/startPage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="monospace"
+            android:text="Il ne faut jamais cocher sans lire. Là tu as accepté que nous te faisions la morale dans cet encadré!"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/continu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="85dp"
+            android:layout_marginTop="150dp"
+            android:text="Continuer" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="50dp"
+            android:fontFamily="monospace"
+            android:text="Tu as gagné ce jeu"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

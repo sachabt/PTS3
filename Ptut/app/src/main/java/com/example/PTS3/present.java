@@ -1,8 +1,4 @@
-package com.example.td4;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Button;
+package com.example.PTS3;
 
 public abstract class present extends MapsActivity{
 
