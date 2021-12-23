@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AdminGame">
 
     <LinearLayout
         android:id="@+id/startPage"
@@ -156,10 +156,10 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="50dp"
         android:layout_marginVertical="120dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="250dp"
         android:background="#777777"
         android:orientation="vertical"
         android:visibility="invisible"
@@ -198,4 +198,49 @@
             android:textAlignment="center"
             android:textSize="16sp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verifPage"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:background="#606277"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/startPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timePage">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Etes vous sur de vouloir quitter l'activité?"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/annuler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+
+                android:text="Annuler" />
+
+            <Button
+                android:id="@+id/accepter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:text="Accepter" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

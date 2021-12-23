@@ -33,7 +33,8 @@
         <activity
             android:name=".MapsActivity"
             android:exported="true"
-            android:label="ProjetTut"   >
+            android:label="ProjetTut"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,22 +42,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AdministrationActivity">
+        <activity android:name=".AdministrationActivity"
+            android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".AdminGame">
+        <activity android:name=".AdminGame"
+            android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".infoActivity">
+        <activity android:name=".infoActivity"
+            android:screenOrientation="portrait">
             </activity>
 
-        <activity android:name=".MMIActivity">
+        <activity android:name=".MMIActivity"
+            android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".TCActivity">
+        <activity android:name=".TCActivity"
+            android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".GBActivity">
+        <activity android:name=".GBActivity"
+            android:screenOrientation="portrait">
         </activity>
 
 
