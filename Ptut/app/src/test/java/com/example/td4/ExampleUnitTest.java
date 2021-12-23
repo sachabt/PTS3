@@ -1,4 +1,4 @@
-package com.example.PTS3;
+package com.example.td4;
 
 import org.junit.Test;
 
