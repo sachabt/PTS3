@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/backButtonI"
+                android:id="@+id/backButtonT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -104,7 +104,7 @@
             android:textStyle="italic" />
 
         <Button
-            android:id="@+id/startI"
+            android:id="@+id/startT"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"

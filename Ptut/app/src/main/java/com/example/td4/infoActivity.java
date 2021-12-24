@@ -7,17 +7,17 @@ import android.widget.ImageView;
 
 public class infoActivity extends present {
 
-    private Button playI;
-    private ImageView backButtonI;
+    private Button play;
+    private ImageView backButton;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
 
-        backButtonI = findViewById(R.id.backButtonI);
-        backButtonI.setOnClickListener(v -> change());
-        playI=findViewById(R.id.startI);
-        playI.setOnClickListener(v -> {
+        backButton = findViewById(R.id.backButtonT);
+        backButton.setOnClickListener(v -> change());
+        play=findViewById(R.id.startT);
+        play.setOnClickListener(v -> {
             Intent adminGame=new Intent(getApplicationContext(),AdminGame.class);
             startActivity(adminGame);
         });

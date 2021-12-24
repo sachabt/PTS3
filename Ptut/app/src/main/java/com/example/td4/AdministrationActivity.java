@@ -15,9 +15,9 @@ public class AdministrationActivity extends present{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
 
-        backButtonA = findViewById(R.id.backButtonI);
+        backButtonA = findViewById(R.id.backButtonT);
         backButtonA.setOnClickListener(v -> change());
-        playA=findViewById(R.id.startI);
+        playA=findViewById(R.id.startT);
         playA.setOnClickListener(v -> {
             Intent adminGame=new Intent(getApplicationContext(),AdminGame.class);
             startActivity(adminGame);
