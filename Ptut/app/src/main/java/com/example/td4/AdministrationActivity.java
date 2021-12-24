@@ -8,17 +8,17 @@ import android.widget.ImageView;
 public class AdministrationActivity extends present{
 
 
-    private Button play;
+    private Button playA;
     private ImageView backButtonA;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
 
-        backButtonA = findViewById(R.id.backButtonA);
+        backButtonA = findViewById(R.id.backButtonI);
         backButtonA.setOnClickListener(v -> change());
-        play=findViewById(R.id.start);
-        play.setOnClickListener(v -> {
+        playA=findViewById(R.id.startI);
+        playA.setOnClickListener(v -> {
             Intent adminGame=new Intent(getApplicationContext(),AdminGame.class);
             startActivity(adminGame);
         });

@@ -9,25 +9,32 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/backButtonA"
+            <ImageView
+                android:id="@+id/backButtonI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="?attr/actionModeCloseDrawable" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginLeft="15dp"
+                android:src="?android:attr/actionModeCloseDrawable" />
         </LinearLayout>
 
         <ImageView
@@ -40,7 +47,8 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:text="Bâtiment informatique:"
             android:textColor="#2187D9"
             android:textStyle="bold" />
@@ -49,7 +57,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:padding="15dp"
             android:text="Le B.U.T. INFORMATIQUE forme en3 ans des développeurs et des développeuses qui participent à la conception, réalisation et mise en œuvre d’applications informatiques pour les entreprises."
             android:textStyle="italic" />
@@ -58,8 +67,9 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Nom Activité:"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Ca fait lier:"
             android:textColor="#2187D9"
             android:textStyle="bold" />
 
@@ -67,7 +77,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:padding="15dp"
             android:text="Le jeu consiste à lier les câbles aux ports correspondant."
             android:textStyle="italic" />
@@ -76,7 +87,8 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:text="Comment Jouer:"
             android:textColor="#2187D9"
             android:textStyle="bold" />
@@ -85,13 +97,14 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:padding="15dp"
             android:text="Sélectionner un cable puis tirer le jusqu'a l'embout correspondant en maintenant vle contact avec l'écran."
             android:textStyle="italic" />
 
         <Button
-            android:id="@+id/start"
+            android:id="@+id/startI"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"
