@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class AdministrationActivity extends present{
+public class AdministrationActivity extends Present {
 
 
     private Button playA;

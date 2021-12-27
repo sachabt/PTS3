@@ -1,10 +1,9 @@
 package com.example.td4;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class GBActivity extends present {
+public class GBActivity extends Present {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

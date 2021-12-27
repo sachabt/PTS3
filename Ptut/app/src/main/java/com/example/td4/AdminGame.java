@@ -13,7 +13,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class AdminGame extends game {
+public class AdminGame extends Game {
 
 
     private Button valider;

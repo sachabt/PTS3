@@ -2,7 +2,6 @@ package com.example.td4;
 
 import android.Manifest;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -36,8 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String TAG = MapsActivity.class.getSimpleName();
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
-    private balise[] tabBalise;
-    private balise baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU,baliseCROUS,baliseBatDroit,baliseRU;
+    private Balise[] tabBalise;
+    private Balise baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU,baliseCROUS,baliseBatDroit,baliseRU;
     private LocationManager locationManager;
     private static final long MIN_TIME = 400;
     private static final float MIN_DISTANCE = 50;
@@ -50,18 +49,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Initialise les différents points d'intérêt et les ajoutes a un tableau
-        baliseBatDroit =new balise(this, new LatLng(48.087086227818894, -0.7590331292590524), "En savoir plus: Droit");
-        baliseBatInfo = new balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus: Info");
-        baliseBatMmi = new balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus: MMI");
-        baliseBatTc = new balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus: TC");
-        baliseBatGb = new balise(this, new LatLng(48.0856041, -0.7580022), "En savoir plus: GB");
-        baliseAdmin = new balise(this, new LatLng(48.0859, -0.7580282), "En savoir plus: Administration");
-        baliseBU= new balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "En savoir plus: Bibliotheque");
-        baliseCROUS =new balise(this, new LatLng(48.08541004957722, -0.7588990181534716), "En savoir plus: CROUS");
-        baliseRU =new balise(this, new LatLng(48.086656572448774, -0.7571051576155985), "En savoir plus: Restaurant Universitaire");
+        baliseBatDroit =new Balise(this, new LatLng(48.087086227818894, -0.7590331292590524), "En savoir plus: Droit");
+        baliseBatInfo = new Balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus: Info");
+        baliseBatMmi = new Balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus: MMI");
+        baliseBatTc = new Balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus: TC");
+        baliseBatGb = new Balise(this, new LatLng(48.0856041, -0.7580022), "En savoir plus: GB");
+        baliseAdmin = new Balise(this, new LatLng(48.0859, -0.7580282), "En savoir plus: Administration");
+        baliseBU= new Balise(this, new LatLng(48.08597435745002, -0.7587137729929605), "En savoir plus: Bibliotheque");
+        baliseCROUS =new Balise(this, new LatLng(48.08541004957722, -0.7588990181534716), "En savoir plus: CROUS");
+        baliseRU =new Balise(this, new LatLng(48.086656572448774, -0.7571051576155985), "En savoir plus: Restaurant Universitaire");
 
 
-        tabBalise = new balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU,baliseCROUS,baliseBatDroit,baliseRU};
+        tabBalise = new Balise[]{baliseBatInfo, baliseBatMmi, baliseBatTc, baliseBatGb, baliseAdmin,baliseBU,baliseCROUS,baliseBatDroit,baliseRU};
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -142,7 +141,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.setMyLocationEnabled(true);
 
-        for (balise balise: tabBalise) {
+        for (Balise balise: tabBalise) {
             balise.creerMarker(mMap);
         }
 
@@ -193,7 +192,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(Administration);
                 break;
             case "En savoir plus: Info":
-                Intent info= new Intent(getApplicationContext(),infoActivity.class);
+                Intent info= new Intent(getApplicationContext(), InfoActivity.class);
                 startActivity(info);
                 break;
             case "En savoir plus: MMI":

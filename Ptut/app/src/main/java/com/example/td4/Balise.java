@@ -7,7 +7,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class balise {
+public class Balise {
 
     private MapsActivity context;
     private LatLng coordonnees;
@@ -15,7 +15,7 @@ public class balise {
     private boolean valide=false;
     private Marker marker;
 
-    public  balise(MapsActivity pContext,LatLng pCoordonnees,String pTitre){
+    public Balise(MapsActivity pContext, LatLng pCoordonnees, String pTitre){
     this.context=pContext;
     this.coordonnees=pCoordonnees;
     this.titre=pTitre;

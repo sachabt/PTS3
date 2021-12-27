@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 
-public class loadPage extends FragmentActivity {
+public class LoadPage extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

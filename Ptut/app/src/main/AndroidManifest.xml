@@ -50,7 +50,7 @@
             android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".infoActivity"
+        <activity android:name=".InfoActivity"
             android:screenOrientation="portrait">
             </activity>
 

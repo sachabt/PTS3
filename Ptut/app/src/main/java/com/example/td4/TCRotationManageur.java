@@ -15,7 +15,7 @@ public class TCRotationManageur implements SensorEventListener {
     public Direction direction = Direction.NONE;
 
     private boolean init=true;//FIXME ugly, but simple, way to do something
-    private int sensibility = 15;
+    private final int sensibility = 15;
     private double phoneStartPitch = 0;
     public TCRotationManageur(TCGame pContext){
         context = pContext;

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class TCActivity extends present {
+public class TCActivity extends Present {
 
     private Button play;
     private ImageView backButton;

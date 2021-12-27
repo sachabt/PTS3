@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.FragmentActivity;
 
-public abstract class game extends FragmentActivity {
+public abstract class Game extends FragmentActivity {
 
     public boolean state;
     public View verifPage;
