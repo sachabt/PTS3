@@ -39,7 +39,7 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="252dp"
-            android:src="@drawable/administration" />
+            android:src="@drawable/tc" />
 
         <androidx.constraintlayout.widget.Barrier
             android:layout_width="match_parent"
@@ -103,7 +103,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Scroll le plus vite possible pour accepter ces terribles conditions d'utilisations!!! (Attention toutes les 15 secondes tu retournes automatiquement au début de celles ci)"
+            android:text="Incline ton téléphone pour entrer le mot de passe "
             android:textStyle="italic" />
 
         <Button
