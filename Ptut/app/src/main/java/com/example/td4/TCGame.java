@@ -36,7 +36,7 @@ public class TCGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.TCGame);
+        setContentView(R.layout.tcgame);
 
         rotationManageur = new TCRotationManageur(this);
 
@@ -45,12 +45,7 @@ public class TCGame extends AppCompatActivity {
 
         endGameButton = findViewById(R.id.endGameButton);
 
-        endGameButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        endGameButton.setOnClickListener(v -> finish());
         code = generateCode();
 
         for(Direction i : code){

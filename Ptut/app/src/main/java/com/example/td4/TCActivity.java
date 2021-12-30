@@ -12,13 +12,13 @@ public class TCActivity extends Present {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);
+        setContentView(R.layout.tc);
 
         backButton = findViewById(R.id.backButtonT);
         backButton.setOnClickListener(v -> change());
         play=findViewById(R.id.startT);
         play.setOnClickListener(v -> {
-            Intent tcGame=new Intent(getApplicationContext(),AdminGame.class);
+            Intent tcGame=new Intent(getApplicationContext(),TCGame.class);
             startActivity(tcGame);
         });
 
