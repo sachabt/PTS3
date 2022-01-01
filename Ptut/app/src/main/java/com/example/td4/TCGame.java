@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import java.util.Random;
 
-public class TCGame extends AppCompatActivity {
+public class TCGame extends Game {
 
     int codeLength = 4;
     int numberOfRightDirections = 0;
