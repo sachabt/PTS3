@@ -57,6 +57,15 @@
         <activity android:name=".MMIActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".MMIGameFirstPart"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".MMIGameSecondPart"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".MMIGameThirdPart"
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity android:name=".TCActivity"
             android:screenOrientation="portrait">
