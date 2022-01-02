@@ -39,7 +39,7 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="252dp"
-            android:src="@drawable/administration" />
+            android:src="@drawable/ru" />
 
         <androidx.constraintlayout.widget.Barrier
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Bâtiment Administratif:"
+            android:text="Restaurant Universitaire:"
             android:textColor="#2187D9"
             android:textStyle="bold" />
 
@@ -63,55 +63,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Ce batiment te sera très utile dans le cas où tu aurais des problèmes liés a ton année étudiante ou que tu as une petite faim et souhaite t'acheter un PAIN AU CHOCOLAT à la caféteria ! "
+            android:text="C'est l'heure du repas et tu as faim ? Le Restaurant Universitaire plus communément appelé RU te permet de manger avec tes camarades. Trois pôles sont accessible en ce lieu, tout d'abord le pole tradition proposant un menu varié chaque jour ayant pour objectif l'équilibre de l'alimentation. Ensuite le pole Grillade qui comme son nom l'indique propose tout les jours un produits grillé différents. Pour finir le pole Poisson/Veggie offrant une possibilité au vegetarien ainsi que du poisson de manière régulière."
             android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:text="Conditions Générales d'Accélération:"
-            android:textColor="#2187D9"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:text="Comme tout le monde le sais l'administration c'est long et rarement fun tu devras alors traverser cette épreuve le plus vite possible."
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:text="Comment Jouer:"
-            android:textColor="#2187D9"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:text="Scroll le plus vite possible pour accepter ces terribles conditions d'utilisations!!! (Attention toutes les 15 secondes tu retournes automatiquement au début de celles ci)"
-            android:textStyle="italic" />
-
-        <Button
-            android:id="@+id/startT"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_gravity="center_horizontal"
-            android:text="Commencer l'activité" />
 
     </LinearLayout>
 

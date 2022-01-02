@@ -187,13 +187,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void change(Marker marker)  {
 
         switch (marker.getTitle()){
-            case "En savoir plus: Administration":
-                Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
-                startActivity(Administration);
+            case "En savoir plus: Restaurant Universitaire":
+                Intent RU= new Intent(getApplicationContext(),RuActivity.class);
+                startActivity(RU);
                 break;
             case "En savoir plus: Info":
-                Intent info= new Intent(getApplicationContext(), InfoActivity.class);
-                startActivity(info);
+                Intent Info= new Intent(getApplicationContext(), InfoActivity.class);
+                startActivity(Info);
                 break;
             case "En savoir plus: MMI":
                 Intent MMI= new Intent(getApplicationContext(),MMIActivity.class);
@@ -207,7 +207,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Intent TC= new Intent(getApplicationContext(),TCActivity.class);
                 startActivity(TC);
                 break;
-
+            case "En savoir plus: RU":
+                Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
+                startActivity(Administration);
+                break;
             default:
                 break;
         }
