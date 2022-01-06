@@ -49,7 +49,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Initialise les différents points d'intérêt et les ajoutes a un tableau
-        baliseBatDroit =new Balise(this, new LatLng(48.087086227818894, -0.7590331292590524), "En savoir plus: Droit");
+        baliseBatDroit = new Balise(this, new LatLng(48.087086227818894, -0.7590331292590524), "En savoir plus: Droit");
         baliseBatInfo = new Balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus: Info");
         baliseBatMmi = new Balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus: MMI");
         baliseBatTc = new Balise(this, new LatLng(48.0861559, -0.7581953), "En savoir plus: TC");
