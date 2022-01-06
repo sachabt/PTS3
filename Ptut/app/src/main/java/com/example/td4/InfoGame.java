@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class InfoActivity extends Activity {
+public class InfoGame extends Activity {
 
     Button validateButton;
     TextView scoreText;
@@ -26,8 +26,8 @@ public class InfoActivity extends Activity {
 
     int score;
 
-    List<InfoActivity.Dragable> dragables;
-    List<InfoActivity.DragZone> dragZones;
+    List<Dragable> dragables;
+    List<DragZone> dragZones;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +35,8 @@ public class InfoActivity extends Activity {
 
         score = 0;
 
-        dragables = new ArrayList<>();
-        dragZones = new ArrayList<>();
+        dragables = new ArrayList<Dragable>();
+        dragZones = new ArrayList<DragZone>();
 
         dragImages  = new ImageView[7][4];
 
