@@ -82,6 +82,14 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".BUActivity">
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".BUGame">
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>

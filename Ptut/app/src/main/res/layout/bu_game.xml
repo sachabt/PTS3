@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bibliotheque_fond"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/return_button"/>
+
+            <ImageButton
+                android:id="@+id/enigme"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/parchemin_ecrit"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/livre1"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/livre1"/>
+            <!--<ImageButton
+                android:id="@+id/livre2"
+                android:layout_width="250dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="150dp"
+                android:background="@drawable/livre2"/>-->
+
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="455dp"
+            android:visibility="invisible">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <Button
+                    android:id="@+id/mrBacker"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Mr Backer"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/john"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="John"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/inspecteur"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="M. Stevens"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <Button
+                    android:id="@+id/jack"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Jack"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/james"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="James"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/player"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Moi"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

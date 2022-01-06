@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PTS3g11</string>
     <string name="title_activity_maps">PTS3g11</string>
+    <string name="Menu">Revenir au menu principal</string>
 </resources>

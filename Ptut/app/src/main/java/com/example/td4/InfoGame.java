@@ -31,7 +31,7 @@ public class InfoActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);
+        setContentView(R.layout.infogame);
 
         score = 0;
 
