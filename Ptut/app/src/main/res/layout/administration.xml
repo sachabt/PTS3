@@ -32,6 +32,7 @@
                 android:id="@+id/backButtonT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:src="?android:attr/actionModeCloseDrawable" />
         </LinearLayout>
 
