@@ -105,7 +105,9 @@
             android:name=".DroitGame"
             android:screenOrientation="portrait">
         </activity>
-
+        <activity android:name=".GBGame"
+            android:screenOrientation="portrait">
+        </activity>
 
     </application>
 
