@@ -82,11 +82,11 @@
             android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".BUActivity">
+        <activity android:name=".BUActivity"
             android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".BUGame">
+        <activity android:name=".BUGame"
             android:screenOrientation="portrait">
         </activity>
 

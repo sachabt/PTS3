@@ -5,18 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class BUActivity extends AppCompatActivity {
+public class BUActivity extends Present {
 
-    private Button playButton;
 
-    @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bu);
 
-        playButton = findViewById(R.id.playButton);
+        Button playButton = this.findViewById(R.id.playButton);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
