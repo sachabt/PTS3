@@ -15,6 +15,7 @@ public class AdministrationActivity extends Present {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.administration);
 
+        //Initialise les boutons de la page
         backButtonA = findViewById(R.id.backButtonT);
         backButtonA.setOnClickListener(v -> change());
         playA=findViewById(R.id.startT);
