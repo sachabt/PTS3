@@ -35,8 +35,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="224dp"
-            android:src="@drawable/illustration_mmi" />
+            android:layout_height="200dp"
+            android:src="@drawable/mmi_img" />
 
         <TextView
             android:id="@+id/textView2"

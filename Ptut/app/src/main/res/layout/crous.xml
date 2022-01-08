@@ -39,16 +39,16 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="252dp"
-            android:src="@drawable/ru" />
+            android:layout_height="225dp"
+            android:src="@drawable/crous_img" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:text="Restaurant Universitaire :"
+            android:layout_marginTop="15dp"
+            android:text="Dormerie du CROUS :"
             android:textColor="#2187D9"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -60,7 +60,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="C'est l'heure du repas et tu as faim ? Le Restaurant Universitaire, plus communément appelé RU te permet de manger avec tes camarades. Trois pôles sont accessibles en ce lieu : \n • Le pôle tradition proposant un menu varié chaque jour ayant pour objectif l'équilibre de l'alimentation. \n • Le pôle Grillade qui comme son nom l'indique propose tous les jours un produit grillé différent. \n • Le pôle Poisson/Veggie offrant des menus sans viande ainsi que du poisson de manière régulière."
+            android:text="La 'dormerie' du CROUS est l'endroit où certains étudiants de l'IUT habitent pour leurs études. \n Rattachée au CROUS de Nantes, la résidence « La Dormerie » à Laval, propose 135 studios de type T1 et 14 studios T1 Bis aux étudiants en recherche de logement aux portes de la Faculté de Droit, de l'IUT Laval, de l'ESTACA ou encore de ESIEA. Des espaces collectifs accommodés aux personnes en situation de handicap (salle de travail, laverie, parking réservé, stationnement deux-roues…) sont également disponibles. Chaque studio dispose d'une prise TV, d'une connexion internet filaire (câble non fourni) ainsi que d'un réseau Wifi, et est sécurisée via interphone. 'La Dormerie' est proche d'une installation sportive."
             android:textStyle="italic" />
 
     </LinearLayout>

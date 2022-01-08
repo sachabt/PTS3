@@ -31,7 +31,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="230dp"
-            android:src="@drawable/bu_img" />
+            android:src="@drawable/fac_droit_img" />
 
         <TextView
             android:id="@+id/textView2"
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="La Bibliothèque Universitaire permet aux étudiants d'avoir accès à de nombreux livres de différents types, un espace de travail calme et un accès libre à des ordinateurs et une imprimante. On peut également y emprunter des livres, des films et des jeux de société."
+            android:text="La faculté de Droit propose une licence en Droit et une licence professionnelle Droit et gestion des organisations agricoles et agroalimentaires."
             android:textStyle="italic" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Enigma :"
+            android:text="Facts please :"
             android:textColor="#2187D9"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Dans ce jeu, vous devrez vous aider de livres pour résoudre des énigmes."
+            android:text="Dans ce jeu, tu devras prendre la place d'un juge. Etudie les faits et donne ton verdict (coupable/non coupable)."
             android:textStyle="italic" />
 
         <TextView

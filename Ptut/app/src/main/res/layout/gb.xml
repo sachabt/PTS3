@@ -40,7 +40,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="230dp"
-            android:src="@drawable/info" /> <!--a changer-->
+            android:src="@drawable/gb_img" />
 
         <TextView
             android:id="@+id/textView2"
