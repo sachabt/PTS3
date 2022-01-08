@@ -1,8 +1,11 @@
 package com.example.td4;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +32,7 @@ public class TCGame extends Game {
     private ImageView rightArrow;
     private ImageView leftArrow;
 
-    private ConstraintLayout endOfGameWindow;
+    //private ConstraintLayout endOfGameWindow;
     private Button endGameButton;
     private CheckBox[] codeCheck = new CheckBox[4];
 
@@ -40,12 +43,12 @@ public class TCGame extends Game {
 
         rotationManageur = new TCRotationManageur(this);
 
-        endOfGameWindow = findViewById(R.id.endOfGameWindow);
+        /*endOfGameWindow = findViewById(R.id.endOfGameWindow);
         endOfGameWindow.setVisibility(View.GONE);
 
         endGameButton = findViewById(R.id.endGameButton);
 
-        endGameButton.setOnClickListener(v -> finish());
+        endGameButton.setOnClickListener(v -> finish());*/
         code = generateCode();
 
         for(Direction i : code){
@@ -60,6 +63,8 @@ public class TCGame extends Game {
         downArrow = findViewById(R.id.downArrow);
         rightArrow = findViewById(R.id.rightArrow);
         leftArrow = findViewById(R.id.leftArrow);
+
+        
     }
 
     private Direction[] generateCode(){
@@ -104,7 +109,7 @@ public class TCGame extends Game {
             lastDirection = direction;
             if(direction != Direction.NONE){
                 if(isRight(direction))
-                    endGame();
+                    createDialog(true);
             }
         }
 
@@ -135,10 +140,24 @@ public class TCGame extends Game {
         downArrow.setImageResource(R.drawable.arrowdownwhite);
     }
 
-    private void endGame() {
-        endOfGameWindow.setVisibility(View.VISIBLE);
-        //intent to switch back to the main scene
-        //maybe show a you won screen
+    public void createDialog(boolean win){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Vous avez gagné !");
+        builder.setMessage("Vous avez trouvez le code, félicitations ! Vous pouvez maintenant récupérer le contenu du coffre.");
+
+        if(!win){
+            builder.setTitle("Vous avez perdu...");
+            builder.setMessage("Le code n'a pas été trouvé...");
+        }
+
+        builder.setPositiveButton(getResources().getString(R.string.Menu), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), TCActivity.class);
+                startActivity(intent);
+            }
+        });
+        builder.create().show();
     }
 
 }
