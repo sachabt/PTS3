@@ -52,7 +52,11 @@
 
         <activity android:name=".InfoActivity"
             android:screenOrientation="portrait">
-            </activity>
+        </activity>
+
+        <activity android:name=".InfoGame"
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity android:name=".MMIActivity"
             android:screenOrientation="portrait">
