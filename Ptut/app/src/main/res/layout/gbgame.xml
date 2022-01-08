@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gb"
+    android:id="@+id/general">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="384dp"
+        android:layout_height="271dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/aile"
+            android:layout_width="150dp"
+            android:layout_height="132dp"
+            android:src="@drawable/aile"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/bave"
+            android:layout_width="149dp"
+            android:layout_height="136dp"
+            android:src="@drawable/bave"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/grife"
+            android:layout_width="131dp"
+            android:layout_height="135dp"
+            android:src="@drawable/griffe"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/corne"
+            android:layout_width="130dp"
+            android:layout_height="133dp"
+            android:src="@drawable/licorne"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/oreille"
+            android:layout_width="126dp"
+            android:layout_height="133dp"
+            android:src="@drawable/oreille"
+            app:layout_column="2"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:layout_width="196dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396">
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_add" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
