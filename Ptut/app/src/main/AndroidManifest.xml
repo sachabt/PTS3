@@ -108,7 +108,6 @@
         <activity android:name=".GBGame"
             android:screenOrientation="portrait">
         </activity>
-
     </application>
 
 </manifest>

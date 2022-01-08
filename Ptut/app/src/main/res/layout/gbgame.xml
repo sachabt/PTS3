@@ -2,10 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/general"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_gb"
-    android:id="@+id/general">
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="15dp"
+        android:text="valider"
+        android:id="@+id/valider"
+        tools:ignore="MissingConstraints">
+    </Button>
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
@@ -33,7 +42,7 @@
             app:layout_row="0" />
 
         <ImageView
-            android:id="@+id/grife"
+            android:id="@+id/griffe"
             android:layout_width="131dp"
             android:layout_height="135dp"
             android:src="@drawable/griffe"
@@ -55,24 +64,30 @@
             android:src="@drawable/oreille"
             app:layout_column="2"
             app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_column="2"
+            app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>
 
     <LinearLayout
-        android:layout_width="196dp"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_width="414dp"
+        android:layout_height="481dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/add"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="113dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="250dp"
             android:src="@android:drawable/ic_menu_add" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
