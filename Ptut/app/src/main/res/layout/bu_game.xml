@@ -50,12 +50,6 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginLeft="80dp"
                 android:background="@drawable/livre1"/>
-            <!--<ImageButton
-                android:id="@+id/livre2"
-                android:layout_width="250dp"
-                android:layout_height="140dp"
-                android:layout_marginLeft="150dp"
-                android:background="@drawable/livre2"/>-->
 
         </LinearLayout>
     </LinearLayout>

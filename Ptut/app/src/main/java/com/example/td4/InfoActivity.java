@@ -15,8 +15,7 @@ public class InfoActivity extends Present {
         backButton.setOnClickListener(v -> change());
         Button play = findViewById(R.id.startT);
         play.setOnClickListener(v -> {
-            Intent adminGame=new Intent(getApplicationContext(),AdminGame.class);
-            startActivity(adminGame);
+            startActivity(new Intent(getApplicationContext(), InfoGame.class));
         });
     }
 }

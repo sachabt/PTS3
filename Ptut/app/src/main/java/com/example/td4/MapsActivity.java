@@ -211,6 +211,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
                 startActivity(Administration);
                 break;
+            case "En savoir plus: Bibliotheque":
+                Intent BU= new Intent(getApplicationContext(),BUActivity.class);
+                startActivity(BU);
+                break;
             default:
                 break;
         }

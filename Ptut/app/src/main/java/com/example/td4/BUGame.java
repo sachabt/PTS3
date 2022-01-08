@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentActivity;
 
-public class BUGame extends FragmentActivity {
+public class BUGame extends Present {
 
     private ImageButton backButton;
     private Animator currentAnimator;
@@ -62,14 +62,6 @@ public class BUGame extends FragmentActivity {
                 zoomImageFromThumb(livre1View, R.drawable.livre_zoom);
             }
         });
-
-        /*final View livre2View = findViewById(R.id.livre2);
-        livre2View.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                zoomImageFromThumb(livre2View, R.drawable.livre2);
-            }
-        });*/
 
         final View parcheminView = findViewById(R.id.enigme);
         parcheminView.setOnClickListener(new View.OnClickListener() {
