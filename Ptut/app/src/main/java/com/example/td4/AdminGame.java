@@ -42,7 +42,7 @@ public class AdminGame extends Game {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admingame);
 
-
+        //Initialisation de tous les éléments de la page
         valider = findViewById(R.id.valider);
         condition = findViewById(R.id.condition);
 
@@ -60,6 +60,7 @@ public class AdminGame extends Game {
         thirdPartText = findViewById(R.id.thirdPartText);
         fourthPartText = findViewById(R.id.fourthPartText);
 
+
         //Permet d'insérer les textes dans les textview correspondant
         input=getResources().openRawResource(R.raw.firstpart);
         text(firstPartText);
@@ -70,8 +71,8 @@ public class AdminGame extends Game {
         input=getResources().openRawResource(R.raw.fourthpart);
         text(fourthPartText);
 
+        //Affiche les différentes view lorque le bouton pour accéder au cgu est activé
         startButton.setOnClickListener(arg0 -> {
-
             startPage.setVisibility(View.INVISIBLE);
             gamePage.setVisibility(View.VISIBLE);
             timePage.setVisibility(View.VISIBLE);
@@ -101,15 +102,14 @@ public class AdminGame extends Game {
 
 
 
-
+        //Fonction appelé lorsque l'utilisateur appuie sur le bouton valider les cgu
         valider.setOnClickListener(arg0 -> {
-           if(condition.isChecked()){
+           if(condition.isChecked()){   // Si les conditions on été coché affiche le message de victoire et stop le timer
             setState(win);
             winPage.setVisibility(View.VISIBLE);
             mCountDownTimer.cancel();
-
            }
-           else{
+           else{                        // Sinon affiche un message
                Toast erreurMsg = Toast.makeText(
                                  getApplicationContext(), "Vous devez d'abord accepter les conditions d'utilisation", Toast.LENGTH_SHORT);
                erreurMsg.show();
@@ -117,18 +117,17 @@ public class AdminGame extends Game {
         });
 
         continu=findViewById(R.id.continu);
-        continu.setOnClickListener(v -> finish());
+        continu.setOnClickListener(v -> finish());  //Lorsque le bouton continuer est activé met fin a l'activité
     }
 
 
-
-
+    //Permet de mettre a jour le timer
     private void updateCountDownText() {
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
         timer.setText(String.valueOf(seconds));
     }
 
-    public void text(TextView partText){
+    public void text(TextView partText){        //Affiche les différents documents textes dans les textes view correspondant ligne par ligne
 
         try {
             InputStreamReader isr = new InputStreamReader(input);
