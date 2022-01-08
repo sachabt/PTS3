@@ -14,7 +14,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
@@ -28,7 +28,8 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAot-Z_bJvEeoZBlZnOdyxdO2-eDqw0Zw4" />
+            android:value="AIzaSyAot-Z_bJvEeoZBlZnOdyxdO2-eDqw0Zw4"
+             />
 
         <activity
             android:name=".MapsActivity"
@@ -40,6 +41,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".DroitActivity"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity android:name=".AdministrationActivity"
@@ -93,6 +98,11 @@
         <activity android:name=".BUGame"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".DroitGame"
+            android:screenOrientation="portrait">
+        </activity>
+
 
     </application>
 

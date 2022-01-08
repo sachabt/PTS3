@@ -127,7 +127,7 @@ public class AdminGame extends Game {
         timer.setText(String.valueOf(seconds));
     }
 
-    public void text(TextView partText){        //Affiche les différents documents textes dans les textes view correspondant ligne par ligne
+    public void text(TextView partText){        //Transforme les textes pour les adapter en textView
 
         try {
             InputStreamReader isr = new InputStreamReader(input);

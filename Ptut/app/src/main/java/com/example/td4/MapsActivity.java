@@ -215,6 +215,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Intent BU= new Intent(getApplicationContext(),BUActivity.class);
                 startActivity(BU);
                 break;
+            case "En savoir plus: Droit":
+                Intent Droit= new Intent(getApplicationContext(),DroitActivity.class);
+                startActivity(Droit);
+                break;
             default:
                 break;
         }

@@ -20,8 +20,8 @@ public abstract class Game extends FragmentActivity {
 
     @Override
     public void onBackPressed(){
-        verifPage=findViewById(R.id.verifPage);
-        annuler=findViewById(R.id.annuler);
+        verifPage=this.findViewById(R.id.verifPage);
+        annuler=this.findViewById(R.id.annuler);
         annuler.setOnClickListener(v -> verifPage.setVisibility(View.INVISIBLE));
         accepter=findViewById(R.id.accepter);
         accepter.setOnClickListener(v -> finish());
