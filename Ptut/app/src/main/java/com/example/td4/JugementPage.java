@@ -105,7 +105,7 @@ public class JugementPage extends Fragment {
 
         continu=rootView.findViewById(R.id.continu);
         continu.setOnClickListener(v->{
-            Intent back= new Intent(getActivity(),DroitGame.class);
+            Intent back= new Intent(getActivity(),DroitActivity.class);
             startActivity(back);});
 
         return rootView;

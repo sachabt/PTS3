@@ -3,17 +3,23 @@ package com.example.td4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class DroitActivity extends Present{
+
+    private Button playA;
+    private ImageView backButtonA;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.droit);
 
-        Button playButton = this.findViewById(R.id.playButton);
-
-        playButton.setOnClickListener(v -> {
-            Intent droitGame = new Intent(getApplicationContext(), DroitGame.class);
-            startActivity(droitGame);
+        //Initialise les boutons de la page
+        backButtonA = this.findViewById(R.id.backButtonT2);
+        backButtonA.setOnClickListener(v -> change());
+        playA=findViewById(R.id.playButton);
+        playA.setOnClickListener(v -> {
+            Intent DroitGame=new Intent(getApplicationContext(),DroitGame.class);
+            startActivity(DroitGame);
         });
     }
 }

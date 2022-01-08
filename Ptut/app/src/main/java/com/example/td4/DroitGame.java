@@ -20,7 +20,8 @@ public class DroitGame extends Game {
     private ActivityMainBinding binding;
     private int nbAffaires=2;
     private InputStream affaire;
-
+    private String Defense;
+    private String Faits;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +38,17 @@ public class DroitGame extends Game {
         switch (numAffaire){
             case 1:
                 affaire=getResources().openRawResource(R.raw.defense1);
-                String Defense=text();
-                createAffaire("Croft","Lara",25,Defense,true,"Tu n'est pas mon pere",false);
+                Defense=text();
+                affaire=getResources().openRawResource(R.raw.faits1);
+                Faits=text();
+                createAffaire("Croft","Lara",25,Defense,true,Faits,false);
                 break;
             case 2:
-                createAffaire("Oto","Fabrice",46,"Je ne suis pas ton pere",true,"Tu n'est pas mon pere",false);
+                affaire=getResources().openRawResource(R.raw.defense2);
+                Defense=text();
+                affaire=getResources().openRawResource(R.raw.faits1);
+                Faits=text();
+                createAffaire("Oto","Fabrice",46,"Je ne suis pas ton pere",true,Faits,false);
                 break;
             default:
                 break;
