@@ -15,7 +15,9 @@ public class DroitActivity extends Present{
 
         //Initialise les boutons de la page
         backButtonA = this.findViewById(R.id.backButtonT2);
-        backButtonA.setOnClickListener(v -> change());
+        backButtonA.setOnClickListener(v ->
+        {Intent map=new Intent(getApplicationContext(),MapsActivity.class);
+                startActivity(map);});
         playA=findViewById(R.id.playButton);
         playA.setOnClickListener(v -> {
             Intent DroitGame=new Intent(getApplicationContext(),DroitGame.class);
