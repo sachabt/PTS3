@@ -42,19 +42,15 @@
             android:layout_height="252dp"
             android:src="@drawable/administration" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:barrierDirection="top" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Bâtiment Administratif:"
+            android:text="Bâtiment Administratif :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -64,7 +60,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Ce batiment te sera très utile dans le cas où tu aurais des problèmes liés a ton année étudiante ou que tu as une petite faim et souhaite t'acheter un PAIN AU CHOCOLAT à la caféteria ! "
+            android:text="Le Bâtiment Administratif regroupe différents secteurs comme le secrétariat général de l'IUT, la cafétéria et les amphithéâtres 1 et 2."
             android:textStyle="italic" />
 
         <TextView
@@ -73,8 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Conditions Générales d'Accélération:"
+            android:text="Conditions Générales d'Accélération :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -84,7 +81,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Comme tout le monde le sais l'administration c'est long et rarement fun tu devras alors traverser cette épreuve le plus vite possible."
+            android:text="Comme tout le monde le sais, l'administration est une tâche longue et rarement fun. Tu devras donc traverser cette épreuve le plus vite possible."
             android:textStyle="italic" />
 
         <TextView
@@ -93,8 +90,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Comment Jouer:"
+            android:text="Comment Jouer :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -104,14 +102,16 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Scroll le plus vite possible pour accepter ces terribles conditions d'utilisations!!! (Attention toutes les 15 secondes tu retournes automatiquement au début de celles ci)"
+            android:text="Fait défiler l'écran le plus vite possible vers le bas pour accepter ces terribles conditions d'utilisations!!! (Attention, toutes les 15 secondes tu retournes automatiquement au début de celles-ci)"
             android:textStyle="italic" />
 
         <Button
             android:id="@+id/startT"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:text="Commencer l'activité" />
 
     </LinearLayout>

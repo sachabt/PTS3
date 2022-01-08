@@ -10,9 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,8 +28,8 @@
             <ImageButton
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-                //android:src="?attr/actionModeCloseDrawable"
+                android:layout_height="wrap_content"
+                android:src="?android:attr/actionModeCloseDrawable"/>
 
             <Space
                 android:layout_width="wrap_content"
@@ -70,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Dans ce jeu, vous devrez vous aider de livres pour résoudre des énigmes."
+            android:text="Dans ce jeu, tu devras t'aider de livres pour résoudre des énigmes."
             android:textStyle="italic" />
 
         <TextView
@@ -88,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Utilisez les livres mis a disposition dans le jeu. Dans ces livres, vous trouverez des indices pour répondres aux égigmes qui vous seront posées."
+            android:text="Utilise les livres mis a disposition dans le jeu. Dans ces livres, tu trouveras des indices pour répondres aux égigmes qui te serons posées."
             android:textStyle="italic" />
 
         <Button

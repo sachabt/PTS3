@@ -49,8 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Bâtiment informatique:"
+            android:text="Bâtiment informatique :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -60,7 +61,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Le B.U.T. INFORMATIQUE forme en3 ans des développeurs et des développeuses qui participent à la conception, réalisation et mise en œuvre d’applications informatiques pour les entreprises."
+            android:text="Le B.U.T. INFORMATIQUE forme en 3 ans des développeurs et des développeuses qui participent à la conception, la réalisation et la mise en œuvre d’applications informatiques pour les entreprises."
             android:textStyle="italic" />
 
         <TextView
@@ -69,8 +70,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Ca fait lier:"
+            android:text="Ca fait lier :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -89,8 +91,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Comment Jouer:"
+            android:text="Comment Jouer :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -106,7 +109,7 @@
         <Button
             android:id="@+id/startT"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:text="Commencer l'activité" />
