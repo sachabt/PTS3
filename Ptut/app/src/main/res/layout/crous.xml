@@ -60,7 +60,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="La 'dormerie' du CROUS est l'endroit où certains étudiants de l'IUT habitent pour leurs études. \n Rattachée au CROUS de Nantes, la résidence « La Dormerie » à Laval, propose 135 studios de type T1 et 14 studios T1 Bis aux étudiants en recherche de logement aux portes de la Faculté de Droit, de l'IUT Laval, de l'ESTACA ou encore de ESIEA. Des espaces collectifs accommodés aux personnes en situation de handicap (salle de travail, laverie, parking réservé, stationnement deux-roues…) sont également disponibles. Chaque studio dispose d'une prise TV, d'une connexion internet filaire (câble non fourni) ainsi que d'un réseau Wifi, et est sécurisée via interphone. 'La Dormerie' est proche d'une installation sportive."
+            android:text="La 'dormerie' du CROUS est l'endroit où certains étudiants de l'IUT habitent pour leurs études. \nRattachée au CROUS de Nantes, la résidence « La Dormerie » à Laval, propose 135 studios de type T1 et 14 studios T1 Bis aux étudiants en recherche de logement aux portes de la Faculté de Droit, de l'IUT Laval, de l'ESTACA ou encore de ESIEA. Des espaces collectifs accommodés aux personnes en situation de handicap (salle de travail, laverie, parking réservé, stationnement deux-roues…) sont également disponibles. Chaque studio dispose d'une prise TV, d'une connexion internet filaire (câble non fourni) ainsi que d'un réseau Wifi, et est sécurisée via interphone. 'La Dormerie' est proche d'une installation sportive."
             android:textStyle="italic" />
 
     </LinearLayout>
