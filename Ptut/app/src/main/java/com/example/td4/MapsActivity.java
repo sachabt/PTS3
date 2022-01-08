@@ -207,7 +207,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Intent TC= new Intent(getApplicationContext(),TCActivity.class);
                 startActivity(TC);
                 break;
-            case "En savoir plus: RU":
+            case "En savoir plus: Administration":
                 Intent Administration= new Intent(getApplicationContext(),AdministrationActivity.class);
                 startActivity(Administration);
                 break;
