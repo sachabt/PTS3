@@ -32,6 +32,7 @@
                 android:id="@+id/backButtonT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:src="?android:attr/actionModeCloseDrawable" />
         </LinearLayout>
 
@@ -41,11 +42,6 @@
             android:layout_height="252dp"
             android:src="@drawable/ru" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:barrierDirection="top" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -54,6 +50,7 @@
             android:layout_marginTop="5dp"
             android:text="Restaurant Universitaire:"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -63,7 +60,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="C'est l'heure du repas et tu as faim ? Le Restaurant Universitaire plus communément appelé RU te permet de manger avec tes camarades. Trois pôles sont accessible en ce lieu, tout d'abord le pole tradition proposant un menu varié chaque jour ayant pour objectif l'équilibre de l'alimentation. Ensuite le pole Grillade qui comme son nom l'indique propose tout les jours un produits grillé différents. Pour finir le pole Poisson/Veggie offrant une possibilité au vegetarien ainsi que du poisson de manière régulière."
+            android:text="C'est l'heure du repas et tu as faim ? Le Restaurant Universitaire, plus communément appelé RU te permet de manger avec tes camarades. Trois pôles sont accessibles en ce lieu : \n • Le pôle tradition proposant un menu varié chaque jour ayant pour objectif l'équilibre de l'alimentation. \n • Le pôle Grillade qui comme son nom l'indique propose tous les jours un produit grillé différent. \n • Le pôle Poisson/Veggie offrant des menus sans viande ainsi que du poisson de manière régulière."
             android:textStyle="italic" />
 
     </LinearLayout>

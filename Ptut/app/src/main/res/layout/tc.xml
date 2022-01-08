@@ -32,6 +32,7 @@
                 android:id="@+id/backButtonT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:src="?android:attr/actionModeCloseDrawable" />
         </LinearLayout>
 
@@ -41,19 +42,15 @@
             android:layout_height="252dp"
             android:src="@drawable/tc" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:barrierDirection="top" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Bâtiment TC (techniques de commercialisation):"
+            android:text="Bâtiment Techniques de Commercialisation :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -63,7 +60,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Le BUT TC forme en 3 ans des professionnels aux métiers de la vente qui pourront occuper des postes de commerciaux polyvalents, autonomes dans les services commerciaux des entreprises industrielles, dans les entreprises de distribution et de service."
+            android:text="Le BUT TC forme en 3 ans des professionnels des métiers de la vente qui pourront occuper des postes de commerciaux polyvalents, autonomes dans les services commerciaux des entreprises industrielles, dans les entreprises de distribution et de service."
             android:textStyle="italic" />
 
         <TextView
@@ -72,8 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Braquage a la Lavalloise:"
+            android:text="Braquage à la Lavalloise :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -83,7 +81,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Dans ce jeu vous devrez dévérouillez un cadenas en utilisant le bon code"
+            android:text="Dans ce jeu tu devras déverouiller un cadenas en utilisant le bon code."
             android:textStyle="italic" />
 
         <TextView
@@ -92,8 +90,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Comment Jouer:"
+            android:text="Comment Jouer :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -103,14 +102,16 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Incline ton téléphone pour entrer le mot de passe "
+            android:text="Incline ton téléphone pour entrer le mot de passe. Les cpches situées en haut de l'écran te permettront de déchiffrer le code suite à tes essais."
             android:textStyle="italic" />
 
         <Button
             android:id="@+id/startT"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:text="Commencer l'activité" />
 
     </LinearLayout>

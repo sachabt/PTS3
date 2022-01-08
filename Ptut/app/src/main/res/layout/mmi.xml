@@ -46,6 +46,7 @@
             android:layout_marginTop="5dp"
             android:text="Batiment MMI :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -55,7 +56,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Le Diplôme Universitaire de Technologie (DUT) Métiers du Multimédia et de l'Internet forme des professionnels de la conception et de la réalisation de produits et de services  multimédias, en ligne ou hors ligne. Ces produits et services interactifs transmettent par  l’intermédiaire de supports de communication des contenus adaptés à leurs destinataires  mis en forme par l’intégration de médias numériques."
+            android:text="Le Brevet Universitaire de Technologie (BUT) Métiers du Multimédia et de l'Internet forme en 3 ans des techniciens dans le secteur de la communication, du design, du développement web, de l'audiovisuel et de la gestion de projet digital."
             android:textStyle="italic" />
 
         <TextView
@@ -64,8 +65,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Concept du jeu"
+            android:text="WebCreating :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -75,7 +77,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Le jeu consiste à créer un site web, de l'organisation des taches, au codage en passant par le design."
+            android:text="Le jeu consiste à créer un site web, de l'organisation des tâches au codage en passant par le design."
             android:textStyle="italic" />
 
         <TextView
@@ -84,8 +86,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:text="Comment Jouer:"
+            android:text="Comment Jouer :"
             android:textColor="#2187D9"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -95,13 +98,13 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:padding="15dp"
-            android:text="Cliquer (vite) sur les taches, le clavier ou les différentes parties du site en fonction du mini jeu"
+            android:text="Clique rapidement sur les tâches, le clavier ou les différentes parties du site en fonction du mini jeu."
             android:textStyle="italic" />
 
         <Button
             android:id="@+id/startT"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:text="Commencer l'activité" />
