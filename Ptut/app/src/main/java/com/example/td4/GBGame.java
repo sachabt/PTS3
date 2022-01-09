@@ -1,12 +1,11 @@
 package com.example.td4;
 
-import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,11 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,29 +28,39 @@ public class GBGame extends Present {
     List<ImageView> proposition;
     Button valider, cacher;
     int[] recette;
+    Boolean win;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gbgame);
 
-        recette = new int[]{(int)(Math.random() * 5), (int)(Math.random() * 5), (int)(Math.random() * 5)};
+        win = true;
+
+        recette = new int[]{-1, -1, -1};
+        int random = -1;
+        for(int i = 0; i < 3; i++){
+            random = (int)(Math.random() * 5);
+            if(recette[0] == random || recette[1] == random || recette[2] == random){
+                i--;
+            }else{
+                recette[i] = random;
+            }
+        }
+
         proposition = new ArrayList<>();
 
-        createDialog(recette);
-
-        valider = findViewById(R.id.valider);
+        valider = findViewById(R.id.validerButton);
         valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(proposition.size() == 3){
-                    for(int i = 0; i < 4; i++){
-                        if(ingredients[recette[i]].getId() != proposition.get(i).getId()){
-                            //cperdu
+                    for(int i = 0; i < 3; i++) {
+                        if (ingredients[recette[i]].getId() != proposition.get(i).getId()) {
+                            win = false;
                         }
                     }
-                    //cgagné
-                }
-                //cperdu
+                }else{win = false;}
+                popupFin(win);
             }
         });
 
@@ -62,6 +70,8 @@ public class GBGame extends Present {
         general = findViewById(R.id.general);
 
         general.setBackgroundResource(R.drawable.background_gb);
+
+        popupRecette();
 
         ingredients = new ImageView[5];
         ingredients[0] = findViewById(R.id.aile);
@@ -138,34 +148,48 @@ public class GBGame extends Present {
         }
     }
 
-    public void createDialog(int[] recette){
+    public void popupFin(boolean win){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Voici la recette");
+        builder.setTitle("Vous avez gagné !");
+        builder.setMessage("Quelle puissante potion ! Pas pour n'importe quel aventurier");
 
-        String ingrédients = "Tu aura besoin ";
-
-        for(int i = 0; i < 3; i++) {
-            switch (recette[i]) {
-                case 0:
-                    ingrédients += "d'une aile, ";
-                    break;
-                case 1:
-                    ingrédients += "de bave de crapaud, ";
-                    break;
-                case 2:
-                    ingrédients += "d'une griffe de chat, ";
-                    break;
-                case 3:
-                    ingrédients += "d'une corne de licorne, ";
-                    break;
-                case 4:
-                    ingrédients += "d'une oreille d'humain, ";
-                    break;
-            }
+        if(!win){
+            builder.setTitle("Vous avez perdu...");
+            builder.setMessage("Je ne boirais pas ça si j'étais vous..");
         }
 
-        builder.setMessage(ingrédients);
+        builder.setPositiveButton(getResources().getString(R.string.Menu), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(getApplicationContext(), GBActivity.class));
+            }
+        });
         builder.create().show();
     }
+
+    public void popupRecette(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        String recipe = "Mélanger dans le chaudron ";
+
+        for(int i : recette){
+            switch(i){
+                case 0 : recipe += "une aile de chauve souris"; break;
+                case 1 : recipe += "de la bave de crapaud"; break;
+                case 2 : recipe += "une griffe de corbeau"; break;
+                case 3 : recipe += "une corne de licorne"; break;
+                case 4 : recipe += "une oreille humaine"; break;
+            }
+            recipe += ", ";
+        }
+
+        recipe += "et servez la préparation. Attention a l'ordre !";
+
+        builder.setTitle("Recette : ");
+        builder.setMessage(recipe);
+
+        builder.create().show();
+    }
+
+
 
 }

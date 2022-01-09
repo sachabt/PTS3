@@ -1,9 +1,13 @@
 package com.example.td4;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ClipData;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,170 +15,69 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 public class InfoGame extends Activity {
 
-    Button validateButton;
-    TextView scoreText;
-
-    ImageView[][] dragImages;
-
-    int score;
-
-    List<Dragable> dragables;
-    List<DragZone> dragZones;
+    ImageView[] drag;
+    LinearLayout[] drop;
+    Button valider;
+    Boolean win;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.infogame);
 
-        score = 0;
+        win = true;
 
-        dragables = new ArrayList<Dragable>();
-        dragZones = new ArrayList<DragZone>();
-
-        dragImages  = new ImageView[7][4];
-
-        dragImages[0][0] = findViewById(R.id.rouge1);
-        dragImages[1][0] = findViewById(R.id.violet2);
-        dragImages[2][0] = findViewById(R.id.rouge3);
-        dragImages[3][0] = findViewById(R.id.rouge4);
-        dragImages[4][0] = findViewById(R.id.rouge5);
-        dragImages[5][0] = findViewById(R.id.rouge6);
-        dragImages[6][0] = findViewById(R.id.rouge7);
-
-        dragImages[0][1] = findViewById(R.id.bleu1);
-        dragImages[1][1] = findViewById(R.id.bleu2);
-        dragImages[2][1] = findViewById(R.id.bleu3);
-        dragImages[3][1] = findViewById(R.id.bleu4);
-        dragImages[4][1] = findViewById(R.id.bleu5);
-        dragImages[5][1] = findViewById(R.id.bleu6);
-        dragImages[6][1] = findViewById(R.id.bleu7);
-
-        dragImages[0][2] = findViewById(R.id.jaune1);
-        dragImages[1][2] = findViewById(R.id.jaune2);
-        dragImages[2][2] = findViewById(R.id.jaune3);
-        dragImages[3][2] = findViewById(R.id.jaune4);
-        dragImages[4][2] = findViewById(R.id.jaune5);
-        dragImages[5][2] = findViewById(R.id.jaune6);
-        dragImages[6][2] = findViewById(R.id.jaune7);
-
-        dragImages[0][3] = findViewById(R.id.violet1);
-        dragImages[1][3] = findViewById(R.id.violet2);
-        dragImages[2][3] = findViewById(R.id.violet3);
-        dragImages[3][3] = findViewById(R.id.violet4);
-        dragImages[4][3] = findViewById(R.id.violet5);
-        dragImages[5][3] = findViewById(R.id.violet6);
-        dragImages[6][3] = findViewById(R.id.violet7);
-
-        dragables.add(new Dragable(findViewById(R.id.drag1), findViewById(R.id.dragTail1), 1));
-        dragables.add(new Dragable(findViewById(R.id.drag2), findViewById(R.id.dragTail2), 2));
-        dragables.add(new Dragable(findViewById(R.id.drag3), findViewById(R.id.dragTail3), 3));
-        dragables.add(new Dragable(findViewById(R.id.drag4), findViewById(R.id.dragTail4), 4));
-
-        generate();
-
-
-
-        View.OnClickListener validateHandler = new View.OnClickListener() {
+        valider = findViewById(R.id.validerButton);
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                if (verif()) {
-                    score++;
-                } else {
-                    score--;
+                for(ImageView drag : drag){
+                    if(!verif(drag)){
+                       win = false;
+                    }
                 }
-                scoreText.setText("Score : " + score);
-                generate();
-                for (Dragable d : dragables) {
-                    d.reset();
-                }
+                createDialog(win);
             }
-        };
+        });
 
-        validateButton = (Button) this.findViewById(R.id.validateButton);
-        validateButton.setOnClickListener(validateHandler);
+        drag = new ImageView[4];
+        drag[0] = findViewById(R.id.drag1);
+        drag[1] = findViewById(R.id.drag2);
+        drag[2] = findViewById(R.id.drag3);
+        drag[3] = findViewById(R.id.drag4);
 
-        scoreText = (TextView) this.findViewById(R.id.scoreText);
-        scoreText.setText("Score : " + score);
-
-
-    }
-
-    private class DragZone{
-        ImageView zone;
-        int id;
-
-        public DragZone(ImageView zone, int id){
-            this.zone = zone;
-            this.id = id;
-
-            zone.setOnDragListener(new MyDragListener());
-
-            dragZones.add(this);
-        }
-    }
-
-    private class Dragable{
-
-        ImageView head, tail;
-        ViewGroup basePosition, currentPosition;
-
-        int id;
-
-        public Dragable(ImageView head, ImageView tail, int id){
-            this.head = head;
-            this.tail = tail;
-            this.id = id;
-
-            basePosition = (ViewGroup) tail.getParent();
-            currentPosition = basePosition;
-            head.setOnTouchListener(new MyTouchListener());
-
-            dragables.add(this);
+        for(ImageView drag : drag){
+            drag.setOnTouchListener(new MyTouchListener());
         }
 
-        public void reset(){
-            ViewGroup currentPosition = (ViewGroup) head.getParent();
-            currentPosition.removeView(head);
-            basePosition.addView(head);
-            head.setVisibility(View.VISIBLE);
+        drop = new LinearLayout[4];
+        drop[0] = findViewById(R.id.rouge);
+        drop[1] = findViewById(R.id.bleu);
+        drop[2] = findViewById(R.id.jaune);
+        drop[3] = findViewById(R.id.violet);
+
+        for(LinearLayout drop : drop){
+            drop.setOnDragListener(new MyDragListener());
         }
 
     }
 
-    public boolean verif(){
-        for (Dragable d : dragables) {
-            for(DragZone z : dragZones) {
-                if(d.head.getParent() == z.zone && d.id != z.id){
-                    return false;
-                }
-            }
+    private boolean verif(ImageView drag){
+        switch(drag.getId()){
+            case R.id.drag1 :
+                if(((LinearLayout)drag.getParent()).getId() == R.id.jaune1) return true;
+            case R.id.drag2 :
+                if(((LinearLayout)drag.getParent()).getId() == R.id.bleu1) return true;
+            case R.id.drag3 :
+                if(((LinearLayout)drag.getParent()).getId() == R.id.rouge1) return true;
+            case R.id.drag4 :
+                if(((LinearLayout)drag.getParent()).getId() == R.id.violet1) return true;
+            default : return false;
         }
-        return true;
     }
 
-    private void generate(){
-
-        if(!dragZones.isEmpty()){
-            for(Iterator<DragZone> iterator = dragZones.iterator(); iterator.hasNext(); ){
-                iterator.next().zone.setVisibility(View.INVISIBLE);
-                iterator.remove();
-            }
-        }
-
-        ImageView dragZone;
-        for(int i = 0; i < 4; i++){
-            dragZone = dragImages[(int) (Math.random()*(6) + 1)][i];
-            dragZone.setVisibility(View.VISIBLE);
-            dragZones.add(new DragZone(dragZone, i));
-        }
-
-    }
 
     private final class MyTouchListener implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -224,5 +127,24 @@ public class InfoGame extends Activity {
             }
             return true;
         }
+    }
+
+    public void createDialog(boolean win){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Vous avez gagné !");
+        builder.setMessage("Vous savez reoconnaître les couleurs, vous ferez un bon ingénieur");
+
+        if(!win){
+            builder.setTitle("Vous avez perdu...");
+            builder.setMessage("et fait sauter le courant de tout le campus");
+        }
+
+        builder.setPositiveButton(getResources().getString(R.string.Menu), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(getApplicationContext(), InfoActivity.class));
+            }
+        });
+        builder.create().show();
     }
 }

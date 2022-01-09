@@ -6,16 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="10dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="15dp"
-        android:text="valider"
-        android:id="@+id/valider"
-        tools:ignore="MissingConstraints">
-    </Button>
-
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="384dp"
@@ -66,10 +56,10 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/validerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="Servir"
             app:layout_column="2"
             app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>
@@ -88,6 +78,7 @@
             android:layout_marginLeft="145dp"
             android:layout_marginTop="250dp"
             android:src="@android:drawable/ic_menu_add" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

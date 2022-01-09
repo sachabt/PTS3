@@ -43,7 +43,7 @@ public class AdminGame extends Game {
         setContentView(R.layout.admingame);
 
         //Initialisation de tous les éléments de la page
-        valider = findViewById(R.id.valider);
+        valider = findViewById(R.id.validerButton);
         condition = findViewById(R.id.condition);
 
         startPage=findViewById(R.id.startPage);
