@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Utilise les livres mis a disposition dans le jeu. Dans ces livres, tu trouveras des indices pour répondres aux égigmes qui te serons posées."
+            android:text="Utilise les livres mis à disposition dans le jeu. Dans ces livres, tu trouveras des indices pour répondres aux énigmes qui te seront posées."
             android:textStyle="italic" />
 
         <Button

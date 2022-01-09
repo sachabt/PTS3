@@ -15,9 +15,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.app.AlertDialog;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.FragmentActivity;
 
 public class BUGame extends Present {
 
@@ -125,8 +124,7 @@ public class BUGame extends Present {
         }
 
 
-        final ImageView expandedImageView = (ImageView) findViewById(
-                R.id.expanded_image);
+        final ImageView expandedImageView = findViewById(R.id.expanded_image);
         expandedImageView.setImageResource(imageResId);
 
 
