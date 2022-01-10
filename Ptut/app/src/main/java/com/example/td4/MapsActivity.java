@@ -25,6 +25,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
@@ -185,7 +186,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     //Permet de changer d'écran pour passer a l'écran des informations de batiment
     public void change(Marker marker)  {
-
+        marker.setIcon(BitmapDescriptorFactory.defaultMarker(
+                BitmapDescriptorFactory.HUE_GREEN));
         switch (marker.getTitle()){
             case "En savoir plus: Restaurant Universitaire":
                 Intent RU= new Intent(getApplicationContext(),RuActivity.class);
