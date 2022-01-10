@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -95,12 +96,7 @@ public class MMIGameThirdPart extends Game {
 
         timer.postDelayed(timerRunnable, delayBetweenTimerUpdate);
 
-        continuer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //create intent to redirect toward main activity
-            }
-        });
+        continuer.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MMIActivity.class)));
     }
 
     @Override
