@@ -175,7 +175,7 @@ public class GBGame extends Present {
             switch(i){
                 case 0 : recipe += "une aile de chauve souris"; break;
                 case 1 : recipe += "de la bave de crapaud"; break;
-                case 2 : recipe += "une griffe de corbeau"; break;
+                case 2 : recipe += "une serre de corbeau"; break;
                 case 3 : recipe += "une corne de licorne"; break;
                 case 4 : recipe += "une oreille humaine"; break;
             }
