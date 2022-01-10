@@ -132,7 +132,7 @@ public class InfoGame extends Activity {
     public void createDialog(boolean win){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Vous avez gagné !");
-        builder.setMessage("Vous savez reoconnaître les couleurs, vous ferez un bon ingénieur");
+        builder.setMessage("Vous savez reconnaître les couleurs, vous ferez un bon ingénieur");
 
         if(!win){
             builder.setTitle("Vous avez perdu...");
