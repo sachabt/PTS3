@@ -11,7 +11,7 @@
         android:id="@+id/imageView4"
         android:layout_width="392dp"
         android:layout_height="248dp"
-        app:srcCompat="@drawable/defense"
+        android:src="@drawable/defense"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="467dp" />
 

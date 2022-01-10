@@ -1,5 +1,6 @@
 package com.example.td4;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.DialogInterface;
@@ -20,7 +21,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GBGame extends Present {
+public class GBGame extends Game {
 
     ImageView[] ingredients;
     ConstraintLayout general;
