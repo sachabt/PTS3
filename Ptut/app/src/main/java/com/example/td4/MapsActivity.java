@@ -238,7 +238,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             default:
                 break;
         }
-
     }
 
     @Override
@@ -248,10 +247,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.animateCamera(cameraUpdate);
         locationManager.removeUpdates(this);
     }
-
-
-
-
 
 
     @Override
@@ -286,7 +281,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 return;
             }
-
         }
     }
 
@@ -296,9 +290,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String json;
         for(Balise balise : tabBalise){
             json = gson.toJson(balise.getValide());
-            prefsEditor.putString(balise.getTitre(), json);
+            prefsEditor.putString(balise.getId(), json);
         }
-
         prefsEditor.commit();
     }
 
@@ -306,7 +299,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Gson gson = new Gson();
         String json;
         for (Balise balise : tabBalise) {
-            json = mPrefs.getString(balise.getTitre(), "false");
+            json = mPrefs.getString(balise.getId(), "false");
             Log.v("load", json);
             String valide = gson.fromJson(json, String.class);
             balise.creerMarker(mMap, Boolean.parseBoolean(valide));
@@ -318,5 +311,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onStop();
         saveBaliseState();
     }
-
 }

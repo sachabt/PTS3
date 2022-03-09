@@ -45,9 +45,5 @@ public class Balise {
         return valide;
     }
 
-    public String getTitre(){
-        return titre;
-    }
-
     public String getId(){return id;}
 }
