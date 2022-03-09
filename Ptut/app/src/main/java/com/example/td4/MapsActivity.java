@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
@@ -29,6 +30,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
+import com.google.gson.Gson;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, LocationListener {
 
@@ -41,15 +43,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationManager locationManager;
     private static final long MIN_TIME = 400;
     private static final float MIN_DISTANCE = 50;
+    private SharedPreferences mPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mPrefs = getPreferences(MODE_PRIVATE);
         super.onCreate(savedInstanceState);
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
 
-        // Initialise les différents points d'intérêt et les ajoutes a un tableau
+         //Initialise les différents points d'intérêt et les ajoutes a un tableau
         baliseBatDroit = new Balise(this, new LatLng(48.087086227818894, -0.7590331292590524), "En savoir plus: Droit");
         baliseBatInfo = new Balise(this, new LatLng(48.0860628, -0.7596008), "En savoir plus: Info");
         baliseBatMmi = new Balise(this, new LatLng(48.0863351, -0.7589999), "En savoir plus: MMI");
@@ -142,9 +146,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.setMyLocationEnabled(true);
 
-        for (Balise balise: tabBalise) {
-            balise.creerMarker(mMap);
-        }
+        loadBaliseState();
 
         //lignes de devMode
         LatLng pointZoom= new LatLng(48.0859, -0.7580282);
@@ -186,8 +188,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     //Permet de changer d'écran pour passer a l'écran des informations de batiment
     public void change(Marker marker)  {
-        marker.setIcon(BitmapDescriptorFactory.defaultMarker(
-                BitmapDescriptorFactory.HUE_GREEN));
+        Balise baliseSelected = null;
+        for(Balise bal : tabBalise){
+            if(bal.getId().equals(marker.getId())){
+                baliseSelected = bal;
+                break;
+            }
+        }
+
+        baliseSelected.validerBalise();
+
         switch (marker.getTitle()){
             case "En savoir plus: Restaurant Universitaire":
                 Intent RU= new Intent(getApplicationContext(),RuActivity.class);
@@ -228,9 +238,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             default:
                 break;
         }
-
-
-
 
     }
 
@@ -283,5 +290,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    private void saveBaliseState(){
+        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        String json;
+        for(Balise balise : tabBalise){
+            json = gson.toJson(balise.getValide());
+            prefsEditor.putString(balise.getTitre(), json);
+        }
+
+        prefsEditor.commit();
+    }
+
+    private void loadBaliseState(){
+        Gson gson = new Gson();
+        String json;
+        for (Balise balise : tabBalise) {
+            json = mPrefs.getString(balise.getTitre(), "false");
+            Log.v("load", json);
+            String valide = gson.fromJson(json, String.class);
+            balise.creerMarker(mMap, Boolean.parseBoolean(valide));
+        }
+    }
+
+    protected void onStop () {
+        Log.v("stop", "stop");
+        super.onStop();
+        saveBaliseState();
+    }
 
 }
